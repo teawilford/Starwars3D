@@ -1,5 +1,33 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!64 &4480401162129228151
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5141335152704798686}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -9036471103509637096, guid: 08b0c19f1a1ed024f905397acf3a61d0, type: 3}
+--- !u!64 &8079667254531348443
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7173522802364213939}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 909421553300646620, guid: 08b0c19f1a1ed024f905397acf3a61d0, type: 3}
 --- !u!1001 &1315378800656774870
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -89,7 +117,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 94da031d373c3424f8fcbd43fc9ea5c0, type: 2}
     - target: {fileID: 919132149155446097, guid: 08b0c19f1a1ed024f905397acf3a61d0, type: 3}
       propertyPath: m_Name
-      value: Destroyer
+      value: Destroyer Variant
       objectReference: {fileID: 0}
     - target: {fileID: 2815397734829826331, guid: 08b0c19f1a1ed024f905397acf3a61d0, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -105,3 +133,13 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 94da031d373c3424f8fcbd43fc9ea5c0, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08b0c19f1a1ed024f905397acf3a61d0, type: 3}
+--- !u!1 &5141335152704798686 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -3091550616438486776, guid: 08b0c19f1a1ed024f905397acf3a61d0, type: 3}
+  m_PrefabInstance: {fileID: 1315378800656774870}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7173522802364213939 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -1023351791939707803, guid: 08b0c19f1a1ed024f905397acf3a61d0, type: 3}
+  m_PrefabInstance: {fileID: 1315378800656774870}
+  m_PrefabAsset: {fileID: 0}
