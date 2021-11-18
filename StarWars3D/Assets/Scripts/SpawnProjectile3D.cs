@@ -6,6 +6,7 @@ using UnityEngine;
 public class SpawnProjectile3D
     : MonoBehaviour
 {
+<<<<<<< HEAD
 
     public string InputAxisToInitateSpawnedObject = "Fire1";
     public GameObject spawnPoint;
@@ -15,6 +16,15 @@ public class SpawnProjectile3D
     //tags of gameobjects to shoot at
     public string[] TagsOfObjectsToAttack;
     public float DistanceToStartAttacking = 999f;
+=======
+    public GameObject spawnPoint;
+    public GameObject projectTilePrefab;
+    public float projectTileSpeed = 1;
+    DateTime lastSpawnTime = DateTime.Now;
+    //tags of gameobjects to shoot at
+    public string[] TagsOfObjectsToAttack;
+    public float DistanceToStartAttacking = 10f;
+>>>>>>> d6c549c5570154caa103ef83ef0970ebe7106857
     public double secondsBetweenProjectiles = 1;
     public bool AutoFire = false;
     public float secondsBeforeProjectileDies = 10;
@@ -22,6 +32,7 @@ public class SpawnProjectile3D
 
     public GameObject shotEffectsPrefab;
 
+<<<<<<< HEAD
     protected Rigidbody rb;
     // Start is called before the first frame update
     protected void Start()
@@ -29,6 +40,15 @@ public class SpawnProjectile3D
         rb = GetComponent<Rigidbody>();
         if (rb == null)
             rb = gameObject.GetComponentInParent<Rigidbody>();
+=======
+    Rigidbody rb;
+    // Start is called before the first frame update
+    void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+        if (rb == null)
+            gameObject.GetComponentInParent<Rigidbody>();
+>>>>>>> d6c549c5570154caa103ef83ef0970ebe7106857
         if (spawnPoint == null)
             spawnPoint = gameObject;
     }
@@ -36,6 +56,7 @@ public class SpawnProjectile3D
     //if you come with in the specified range of an object, start attacking.
 
     // Update is called once per frame
+<<<<<<< HEAD
     protected virtual void Update()
     {
 
@@ -63,6 +84,14 @@ public class SpawnProjectile3D
                     return;
             }
 
+=======
+    void Update()
+    {
+        
+
+        if ((AutoFire || Input.GetAxis("Fire1") > 0) && (DateTime.Now-lastSpawnTime).TotalSeconds > secondsBetweenProjectiles)
+        {
+>>>>>>> d6c549c5570154caa103ef83ef0970ebe7106857
             //Debug.Log(rb.velocity.magnitude);
             //spawn the projectile
             GameObject projectile = Instantiate(projectTilePrefab, spawnPoint.transform.position, spawnPoint.transform.rotation);
@@ -71,10 +100,17 @@ public class SpawnProjectile3D
 
             if (projectileRigidBody != null)
             {
+<<<<<<< HEAD
                 if (rb != null)
                     projectileRigidBody.AddForce(spawnPoint.transform.forward * (projectTileSpeed + (rb.velocity.magnitude)), ForceMode.Impulse);
                 else
                     projectileRigidBody.AddForce(spawnPoint.transform.forward * (projectTileSpeed), ForceMode.Impulse);
+=======
+                if(rb != null)
+                    projectile.GetComponent<Rigidbody>().AddForce(spawnPoint.transform.forward * (projectTileSpeed + (rb.velocity.magnitude)), ForceMode.Impulse);
+                else
+                    projectile.GetComponent<Rigidbody>().AddForce(spawnPoint.transform.forward * (projectTileSpeed), ForceMode.Impulse);
+>>>>>>> d6c549c5570154caa103ef83ef0970ebe7106857
             }
             //set the destroy time on the projectile
             Destroy(projectile, secondsBeforeProjectileDies);
@@ -89,4 +125,8 @@ public class SpawnProjectile3D
         }
 
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> d6c549c5570154caa103ef83ef0970ebe7106857
